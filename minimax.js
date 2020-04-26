@@ -35,7 +35,6 @@ function minimax(board, depth, isMaximizing) {
     let bestScore = -Infinity;
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
-        // Is the spot available?
         if (board[i][j] == '') {
           board[i][j] = ai;
           let score = minimax(board, depth + 1, false);
@@ -49,7 +48,6 @@ function minimax(board, depth, isMaximizing) {
     let bestScore = Infinity;
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
-        // Is the spot available?
         if (board[i][j] == '') {
           board[i][j] = human;
           let score = minimax(board, depth + 1, true);
